@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="DeltakerPU"
+		transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>DAT109_Prosjekt</jta-data-source>
+		<class>no.hvl.dat109.Deltaker</class>
+		<class>no.hvl.dat109.DeltakerEAO</class>
+		
+		<properties>
+			<property name="eclipselink.weaving" value="false" />
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="StemmePU"
+		transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>DAT109_Prosjekt</jta-data-source>
+		<class>no.hvl.dat109.Stemme</class>
+		<class>no.hvl.dat109.StemmeEAO</class>
+		
+		<properties>
+			<property name="eclipselink.weaving" value="false" />
+		</properties>
+	</persistence-unit>
+	
+	
+	<persistence-unit name="StandPU"
+		transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>DAT109_Prosjekt</jta-data-source>
+		<class>no.hvl.dat109.Stand</class>
+		<class>no.hvl.dat109.StandEAO</class>
+		
+		<properties>
+			<property name="eclipselink.weaving" value="false" />
+		</properties>
+	</persistence-unit>
+</persistence>
+
